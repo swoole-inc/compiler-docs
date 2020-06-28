@@ -20,4 +20,4 @@
  * 不支持`xdebug`或者其他`HOOK`了`opcode handler`的扩展
  * 不支持`Debug`版本的`PHP`环境
 * **`Compiler`离线版加密器仅支持`Linux`平台，`Loader`加载器可支持全部平台**
-* **`Compiler`加密器仅授权过的机器可运行**
+* **`Compiler`离线版加密器仅授权过的机器可运行**
