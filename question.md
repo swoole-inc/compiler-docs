@@ -93,6 +93,9 @@ tp 会将一些 php 文件合并到一个 runtime.php 里面，这样如果其�
 
 不要在项目中有软链接，否则在线加密会丢失文件，本地加密也会丢失软链（直接把软链接的文件当做了真实的文件）
 
+如报错：`swoole_encrypt_file(): open file error (in /tmp/compiler/xxxx/public/storage) (out /tmp/swoole_encrypt/public/storage): No such file or directory`
+>[danger] 这里的`storage`就是个软链接，删除掉重新加密即可。
+
 ## 无法兼容的情况--分析 php 文件
 
 - symfony，swoft 等框架的路由方式如果通过注释的方式是无法正确解析的，框架通过分析源码获得文件的命名空间，类名等信息，这些信息加密后都无法获得，验证方式：搜索框架源代码看有没有`get_file_content`,`token_get_all`等方法来解析 php 文件。
