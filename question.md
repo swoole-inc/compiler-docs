@@ -110,8 +110,10 @@ swoole_encrypt_file(): open file error (in /tmp/compiler/xxxx/public/storage) (o
 
 - 模板 view 文件如果有模板引擎的特殊标签也无法支持，因为模板引擎需要分析 view 的内容来解析替换，如果加密了就无法分析了，只能通过黑名单的方式排除 不要加密 view
 
-## 配置文件格式
+## 配置文件格式或PHP代码格式错误
 
-离线版在加密时指定了配置文件，但是却提示`出错了：未找到，请检查swoole-compiler的安装情况`，请确定改配置文件格式是否为 Linux 格式。
+1. 离线版在加密时指定了配置文件，但是却提示`出错了：未找到，请检查swoole-compiler的安装情况`，请确定改配置文件格式是否为 `unix` 格式；
+
+2. 如果某个文件加密不了，请检查该文件的PHP语法是否正确以及文件格式是否为 `unix` 格式；
 
 可能是在 Windows 下编辑上传到 Linux，导致文件格式为`DOS`格式
