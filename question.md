@@ -55,7 +55,9 @@ Fatal error: Unknown: product xxxxxxx can not find in license file in Unknown on
 
 ## loader 扩展兼容性
 
-因为 swoole_loader 无法和 xdebug、ioncube、zend guard loader、swoole_tracker 扩展兼容，使用前需要先卸载.
+因为 swoole_loader 无法和 xdebug、ioncube、zend guard loader、swoole_tracker 扩展兼容，使用前需要先卸载。
+
+在mips架构下，loader和opcache冲突，使用前需要先卸载。
 
 ## 关于 license 文件
 
