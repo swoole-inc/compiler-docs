@@ -49,6 +49,10 @@ Fatal error: Unknown: product xxxxxxx can not find in license file in Unknown on
 >[info] 错误原因1：确保存在此license文件，并且PHP项目有权限读取
 错误原因2：确保php.ini的open_basedir设置正确，能读取到这个license所在目录
 
+
+10. 形如以下报错，找不到函数 或者找不到类的属性，并且属性名或者函数名是乱码的
+11. 
+
 ## FTP 工具
 
 推荐使用 scp、winscp、宝塔，禁止使用 filezilla
