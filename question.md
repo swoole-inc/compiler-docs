@@ -49,9 +49,12 @@ Fatal error: Unknown: product xxxxxxx can not find in license file in Unknown on
 >[info] 错误原因1：确保存在此license文件，并且PHP项目有权限读取
 错误原因2：确保php.ini的open_basedir设置正确，能读取到这个license所在目录
 
+10. 形如以下报错，找不到函数或者找不到类的属性，并且属性名或者函数名是乱码的
 
-10. 形如以下报错，找不到函数 或者找不到类的属性，并且属性名或者函数名是乱码的
-11. 
+```php
+Call to undefined method Drupal\user\Entity\User::PUF`BTBxUMD()
+```
+>[info] 请先确认源代码是否运行正常，即查看源代码中是否存在对应的函数名或属性名。如果存在并且是最新版本的loader扩展，请联系微信客服。
 
 ## FTP 工具
 
