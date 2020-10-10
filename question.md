@@ -64,7 +64,7 @@ Call to undefined method Drupal\user\Entity\User::PUF`BTBxUMD()
 
 因为 swoole_loader 无法和 xdebug、ioncube、zend guard loader、swoole_tracker 扩展兼容，使用前需要先卸载。
 
-在mips架构下，loader和opcache冲突，使用前需要先卸载。
+在mips架构或UOS系统下，loader和opcache冲突，使用前需要先卸载。
 
 ## 关于 license 文件
 
