@@ -60,6 +60,9 @@ Call to undefined method Drupal\user\Entity\User::PUF`BTBxUMD()
 
 推荐使用 scp、winscp、宝塔，禁止使用 filezilla
 
+>[danger] 使用winscp时需要将传输模式改为**二进制文件**
+![](images/screenshot_1604822680139.png)
+
 ## loader 扩展兼容性
 
 因为 swoole_loader 无法和 xdebug、ioncube、zend guard loader、swoole_tracker 扩展兼容，使用前需要先卸载。
