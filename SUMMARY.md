@@ -2,5 +2,6 @@
 * [扩展安装](loader.md)
     * [使用Loader-Helper安装向导](loader-helper.md)
 * [常见问题](question.md)
+* [依赖问题](deps.md)
 * [注解类框架加密](annotation.md)
     * [Hyperf](hyperf.md)
