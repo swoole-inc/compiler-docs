@@ -135,3 +135,49 @@ swoole_encrypt_file(): open file error (in /tmp/compiler/xxxx/public/storage) (o
 2. 如果某个文件加密不了，请检查该文件的PHP语法是否正确以及文件格式是否为 `unix` 格式；
 
 可能是在 Windows 下编辑上传到 Linux，导致文件格式为`DOS`格式
+
+## 数据类型移植
+
+如果`loader`是跑在`ARM`上的，那么在编译`PHP`的时候需要加上`-fsigned-char`选项。在`PHP`的`Makefile`里面，找到`CFLAGS`，然后追加一个`-fsigned-char`。
+
+例如，原来的`CFLAGS`是这样的：
+
+```Makefile
+CFLAGS = $(CFLAGS_CLEAN) -prefer-non-pic -static
+```
+
+那么你需要改成：
+
+```Makefile
+CFLAGS = $(CFLAGS_CLEAN) -prefer-non-pic -static -fsigned-char
+```
+
+如果之前编译过`PHP`，你需要重新编译`PHP`：
+
+```bash
+make clean && make && make install
+```
+
+> 注意：一定要执行 make clean# 数据类型移植
+
+如果`loader`是跑在`ARM`上的，那么在编译`PHP`的时候需要加上`-fsigned-char`选项。在`PHP`的`Makefile`里面，找到`CFLAGS`，然后追加一个`-fsigned-char`。
+
+例如，原来的`CFLAGS`是这样的：
+
+```Makefile
+CFLAGS = $(CFLAGS_CLEAN) -prefer-non-pic -static
+```
+
+那么你需要改成：
+
+```Makefile
+CFLAGS = $(CFLAGS_CLEAN) -prefer-non-pic -static -fsigned-char
+```
+
+如果之前编译过`PHP`，你需要重新编译`PHP`：
+
+```bash
+make clean && make && make install
+```
+
+> 注意：一定要执行 make clean
