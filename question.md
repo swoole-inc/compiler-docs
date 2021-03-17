@@ -56,6 +56,14 @@ Call to undefined method Drupal\user\Entity\User::PUF`BTBxUMD()
 ```
 >[info] 请先确认源代码是否运行正常，即查看源代码中是否存在对应的函数名或属性名。如果存在并且是最新版本的loader扩展，请联系微信客服。
 
+11. 加密时报错：
+
+```bash
+swoole encrypt file(): file /tmp/swoole_ encrypt/services/gis/lib/Slim/Router. php have been encode, skip it
+```
+
+请查看相关目录中的文件是否存在已经被加密过的代码，可以在PHP源码目录使用`grep -R "SWOOLEC" ./`进行查找。
+
 ## FTP 工具
 
 推荐使用 scp、winscp、宝塔，禁止使用 filezilla
