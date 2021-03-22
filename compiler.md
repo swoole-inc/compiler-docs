@@ -14,7 +14,9 @@
 * 操作系统：`Linux`、`Windows`、`MacOS`、`FreeBSD`
 * 机器硬件：`Intel/AMD x86-64`、`ARM64`
 * 线程安全：同时支持线程安全和非线程安全两种模式
-* 使用限制：
+
+使用限制
+------
  * 目前仅支持`64`位版本的`PHP`，不支持`32`位版本
  * `Windows`平台下只支持`PHP-5.5`或更高版本，不支持`5.4`以下版本（包括`5.4`）；Windows下推荐使用wsl环境，不支持cygwin环境。
  * 不支持`xdebug`或者其他`HOOK`了`opcode handler`的扩展
