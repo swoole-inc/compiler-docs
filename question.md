@@ -59,7 +59,7 @@ Call to undefined method Drupal\user\Entity\User::PUF`BTBxUMD()
 11. 加密时报错：
 
 ```bash
-swoole encrypt file(): file /tmp/swoole_ encrypt/services/gis/lib/Slim/Router. php have been encode, skip it
+swoole_encrypt_file(): file /tmp/swoole_encrypt/services/gis/lib/Slim/Router.php have been encode, skip it
 ```
 
 请查看相关目录中的文件是否存在已经被加密过的代码，可以在PHP源码目录使用`grep -R "SWOOLEC" ./`进行查找。
