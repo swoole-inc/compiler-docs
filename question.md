@@ -103,7 +103,7 @@ Swoole Compiler 不存在运行时解密还原 PHP 源代码的逻辑，二进�
 
 如果你的应用程序中，同时有加密代码和非加密代码。当`swoole_loader`发现是非加密代码时，会将编译控制权转给`opcache`，由`opcache`实现代码的加载。
 
-## 加密器与 ThinkPHP
+## 加密器与 ThinkPHP5
 
 tp 会将一些 php 文件合并到一个 runtime.php 里面，这样如果其中一些加密了一些没加密，那么合并后的文件就无法正常运行。有 3 个解决方案
 
@@ -111,7 +111,7 @@ tp 会将一些 php 文件合并到一个 runtime.php 里面，这样如果其�
 
 - 2 修改配置开启 debug 模式。
 
-- 3 整个项目不加密运行一下让框架生成 runtime.php,然后加密的时候把这个 runtime.php 也一起加密
+- 3 整个项目不加密运行一下让框架生成 runtime.php，然后加密的时候把这个 runtime.php 也一起加密
 
 ## 加密器与 Composer
 
