@@ -45,8 +45,9 @@
 |  有效期 | 价格  |
 | ------------ | ------------ |
 | 1年  | [3000](https://business.swoole.com/order/index/?pay_type=pay_by_year)  |
-|  终生 |  [10000](https://business.swoole.com/order/index/?pay_type=pay_by_all) |
-|  定制 |  [50000](https://business.swoole.com/order/index/?pay_type=pay_by_made) |
+|  基础版 |  [10000](https://business.swoole.com/order/index/?pay_type=pay_by_all) |
+|  高级版 |  [20000](https://business.swoole.com/order/index/?pay_type=pay_by_gaoji) |
+|  旗舰版 |  [50000](https://business.swoole.com/order/index/?pay_type=pay_by_made) |
 
 > 价格含税，可开具增值税普通发票、增值税专用发票
 
