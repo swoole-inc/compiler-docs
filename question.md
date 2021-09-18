@@ -80,13 +80,13 @@ swoole_encrypt_file(): file /tmp/swoole_encrypt/services/gis/lib/Slim/Router.php
 ## 关于 license 文件
 
 - 在 compiler 2.0 版本以后，客户端授权改为授权文件的方式，填写授权文件信息的时候有个`product_name`的字段是授权文件的 key，每个 product_name 对应一个授权文件，例如你的整个代码里面有 2 个产品，2 套授权逻辑 2 个 license，产品名为 PA 和 PB，那么你需要生成 2 个授权文件并在 php.ini 中配置，用`,`分割，例如`swoole_license_files=/yourpath/licenseA,/yourpath/licenseB`，A 产品的 php 文件会根据产品名去授权文件里面找对应的 license，B 产品的 php 文件同理。
-- 在 compiler 3.0 版本以后，使用`swoole_loader.swoole_license_files=/yourpath/licenseA,/yourpath/licenseB`
+- 在 compiler 3.0 版本以后，使用`swoole_loader.license_files=/yourpath/licenseA,/yourpath/licenseB`
 - `swoole_get_license()`函数可以返回这个 php 文件对应的授权文件的内容，在填写授权文件信息时候可以加自定义的 k=>v 对，这个函数会一并返回。
 
->[danger] 如果不能修改`php.ini`来添加`swoole_license_files`，可以不加密入口文件，如`index.php`，在入口文件内添加
+>[danger] 如果不能修改`php.ini`来添加`swoole_loader.license_files`，可以不加密入口文件，如`index.php`，在入口文件内添加
 
 ```php
-ini_set("swoole_loader.swoole_license_files","/yourpath/licenseA");
+ini_set("swoole_loader.license_files","/yourpath/licenseA");
 ```
 
 ## 使用 Swoole Compiler 是否会降低性能
